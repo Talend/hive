@@ -23,7 +23,7 @@
     <relativePath>../pom.xml</relativePath>
   </parent>
 
-  <artifactId>hive-exec</artifactId>
+  <artifactId>hive-exec-shade</artifactId>
   <packaging>jar</packaging>
   <name>Hive Query Language</name>
 
@@ -885,6 +885,10 @@
                 <relocation>
                   <pattern>org.objenesis</pattern>
                   <shadedPattern>org.apache.hive.org.objenesis</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>org.apache.commons</pattern>
+                  <shadedPattern>org.apache.hive.org.apache.commons</shadedPattern>
                 </relocation>
               </relocations>
             </configuration>
